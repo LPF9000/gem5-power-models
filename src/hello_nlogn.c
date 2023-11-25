@@ -29,22 +29,25 @@
 #include <stdio.h>
 
 int main(int argc, char* argv[])
-/* Description: Print operation for 2048 entries. This represents the O(n)
-   case for our gem5 test cases.
+/* Description: Print operation for 2048*log2(2048) entries. This represents 
+   the O(nlog(n)) case for our gem5 test cases.
 
    Author: Rabon B. Marks
 */
 { 	
     // Print test case
-	printf("Running O(n) test with 2048 entries");
+	printf("Running O(n**2) test with 2048*log2(2048) entries");
 	
     // Loop 2048 times
 	for(int i=1; i<=2048; i++){
-	    printf("%d\n", i);
+		// Loop 2048 times
+	    for(int j=1; j<=2048; j=j*2){
+	        printf("%d, %d\n", i, j);
+	    }
 	}
 	
 	// Print success
-	printf("Ran 2048 operations");
+	printf("Ran 2048*log2(2048) operations");
 	
     return 0;
 }
@@ -52,6 +55,6 @@ int main(int argc, char* argv[])
 /*  ---- Changelog ----
 
   11/25/2023: Rabon B. Marks
-  Made algorithm run 2048 times for O(n) time complexity and O(1) space 
-  complexity.
+  Made algorithm run 2048*log2(2048) times for O(n**2) time complexity and
+  O(1) space complexity.
 */

@@ -54,7 +54,7 @@ from caches import *
 # import the SimpleOpts module
 from common import SimpleOpts
 
-SimpleOpts.add_option("--arch", default="x86", choices=["x86", "ARM"],
+SimpleOpts.add_option("--arch", required=True, choices=["x86", "ARM"],
                       help="The architecture to simulate (x86 or ARM)")
                       
 SimpleOpts.add_option("--binary", default="hello_n", choices=["hello_logn", "hello_n", "hello_n2", "hello_nlogn"],
@@ -68,8 +68,6 @@ thispath = os.path.dirname(os.path.realpath(__file__))
 
 # Finalize the arguments and grab the args so we can pass it on to our objects
 args = SimpleOpts.parse_args()
-
-binary_path = os.path.join(thispath, args.binary)
 
 # create the system we are going to simulate
 system = System()
@@ -89,6 +87,8 @@ if args.arch == "x86":
     system.cpu.createInterruptController()
 elif args.arch == "ARM":
     system.cpu = ArmTimingSimpleCPU()
+    
+binary_path = os.path.join(thispath, args.arch, args.binary)
 
 # Create an L1 instruction and data cache
 system.cpu.icache = L1ICache(args)

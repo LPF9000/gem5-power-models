@@ -25,11 +25,34 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+ 
+#include <math.h>
 #include <stdio.h>
 
 int main(int argc, char* argv[])
-{
-    printf("Team Armaggedon says Hello!\n");
+/* Description: Print operation for log2(2048) entries. This represents the O(n)
+   case for our gem5 test cases.
+
+   Author: Rabon B. Marks
+*/
+{ 	
+    // Print test case
+	printf("Running O(log(n)) test with log2(2048) entries");
+	
+    // Loop log2(2048) times
+	for(int i=1; i<=2048; i=i*2){
+	    printf("%d\n", i);
+	}
+	
+	// Print success
+	printf("Ran log2(2048) operations");
+	
     return 0;
 }
+
+/*  ---- Changelog ----
+
+  11/25/2023: Rabon B. Marks
+  Made algorithm run log2(2048) times for O(log(n)) time complexity and O(1) space 
+  complexity.
+*/

@@ -29,7 +29,32 @@
 #include <stdio.h>
 
 int main(int argc, char* argv[])
-{
-    printf("Team Armaggedon says Hello!\n");
+/* Description: Print operation for 2048*2048 entries. This represents 
+   the O(n**2) case for our gem5 test cases.
+
+   Author: Rabon B. Marks
+*/
+{ 	
+    // Print test case
+	printf("Running O(n**2) test with 2048*2048 entries");
+	
+    // Loop 2048 times
+	for(int i=1; i<=2048; i++){
+		// Loop 2048 times
+	    for(int j=1; j<=2048; j++){
+	        printf("%d, %d\n", i, j);
+	    }
+	}
+	
+	// Print success
+	printf("Ran 2048*2048 operations");
+	
     return 0;
 }
+
+/*  ---- Changelog ----
+
+  11/25/2023: Rabon B. Marks
+  Made algorithm run 2048*2048 times for O(n**2) time complexity and 
+  O(1) space complexity.
+*/

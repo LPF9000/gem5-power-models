@@ -37,17 +37,18 @@ int main(int argc, char* argv[])
 { 	
     // Print test case
 	printf("Running O(n**2) test with 2048*2048 entries");
-	
-    // Loop 2048 times
-	for(int i=1; i<=2048; i++){
+	int count = 0;
+    // Loop 128 times
+	for(int i=1; i<=128; i++){
 		// Loop 2048 times
-	    for(int j=1; j<=2048; j++){
-	        printf("%d, %d\n", i, j);
+	    for(int j=1; j<=128; j++){
+	        //printf("%d, %d\n", i, j);
+	        count++;
 	    }
 	}
 	
 	// Print success
-	printf("Ran 2048*2048 operations");
+	printf("\nRan 128*128 operations");
 	
     return 0;
 }

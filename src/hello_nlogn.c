@@ -37,17 +37,18 @@ int main(int argc, char* argv[])
 { 	
     // Print test case
 	printf("Running O(n**2) test with 2048*log2(2048) entries");
-	
+	int count = 0;
     // Loop 2048 times
 	for(int i=1; i<=2048; i++){
 		// Loop 2048 times
 	    for(int j=1; j<=2048; j=j*2){
-	        printf("%d, %d\n", i, j);
+	        //printf("%d, %d\n", i, j);
+	        count++;
 	    }
 	}
 	
 	// Print success
-	printf("Ran 2048*log2(2048) operations");
+	printf("\nRan 2048*log2(2048) operations");
 	
     return 0;
 }

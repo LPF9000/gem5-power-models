@@ -38,14 +38,15 @@ int main(int argc, char* argv[])
 { 	
     // Print test case
 	printf("Running O(log(n)) test with log2(2048) entries");
-	
+	int count = 0;
     // Loop log2(2048) times
 	for(int i=1; i<=2048; i=i*2){
-	    printf("%d\n", i);
+	    //printf("%d\n", i);
+	    count++;
 	}
 	
 	// Print success
-	printf("Ran log2(2048) operations");
+	printf("\nRan log2(2048) operations");
 	
     return 0;
 }

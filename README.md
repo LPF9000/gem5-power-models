@@ -115,3 +115,68 @@ self.clk_domain = SrcClockDomain(clock=cpu_clock,
                                  domain_id=system.numCpuClusters())
 [...]
 ```
+
+## Output Graphs
+
+### Big Cluster Dynamic Power
+#### Default Settings
+![system bigCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/db44d204-3f63-4e03-a0e8-cd8dad60c98e)
+
+#### Double Cache Associativity
+![system bigCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/8b7493e2-4544-400e-ae75-aa45fa1039a0)
+
+#### Doubled Cache Size
+![system bigCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/217bc2bd-331f-47cd-8167-a267e9b8e9e1)
+
+### Big Cluster PM0 (Power On) Dynamic Power
+#### Default Settings
+![system bigCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/53092544-0255-4582-aad5-5af670b8c07d)
+
+#### Double Cache Associativity
+![system bigCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/80257749-3a5a-403a-96a3-340353f9104b)
+
+#### Doubled Cache Size
+![system bigCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/050c1c75-af18-4689-9f6c-55bf32bd7b97)
+
+### Big Cluster Static Power
+#### Default Settings
+![system bigCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/f38ac7bd-50f0-4257-a256-13163b0294ea)
+
+#### Double Cache Associativity
+![system bigCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/a63ce10b-511c-459b-aba4-30684dda2ee1)
+
+#### Doubled Cache Size
+![system bigCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/57808cb9-cf1a-4d18-8afa-ff6001d312a0)
+
+### Little Dynamic Power
+#### Default Settings
+![system littleCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/d16aae34-3e3b-47be-b251-f02e1fd5f0d3)
+
+
+#### Double Cache Associativity
+![system littleCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/4523dcf4-d886-40a4-b28a-26a7a0994fe8)
+
+#### Doubled Cache Size
+![system littleCluster_dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/b85da5ff-1df7-43f4-939a-3939d5e5a072)
+
+### Little Cluster PM0 (Power On) Dynamic Power
+#### Default Settings
+![system littleCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/4e88bf24-b724-43e1-9299-8e6152501169)
+
+
+#### Double Cache Associativity
+![system littleCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/0aa7e21c-0788-41dc-a0ef-aac2a006dc5c)
+
+#### Doubled Cache Size
+![system littleCluster_pm0 dynamicPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/ea7f97f9-a6f9-47d0-ba7c-cbb4afc32bd7)
+
+### Little Cluster Static Power
+#### Default Settings
+![system littleCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/e2a9d39f-6749-46bb-b691-a4fe71794d02)
+
+
+#### Double Cache Associativity
+![system littleCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/f23913e1-2ef8-4081-a3f4-8210a192769f)
+
+#### Doubled Cache Size
+![system littleCluster_staticPower_graph](https://github.com/LPF9000/gem5-power-models/assets/56581520/37c2e3c9-8936-4f89-962e-7acfa3602a96)

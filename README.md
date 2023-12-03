@@ -67,7 +67,7 @@ sudo chmod +x hello_n
 
 **If running the files doesn't works - setting up chroot bin/bash**
 
-*Can also build to mounted drive using this method*
+*Can also compile to mounted drive using this method*
 ```bash
 sudo apt-get install qemu-user-static
 sudo cp /usr/bin/qemu-aarch64-static /mnt/mydrive/usr/bin/

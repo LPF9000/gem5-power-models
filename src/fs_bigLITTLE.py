@@ -317,6 +317,16 @@ def addOptions(parser):
         action="store_true",
         help="Doesn't run simulation, it generates a DTB only",
     )
+
+    # add Voltage Domains to a simulation 
+    parser.add_argument("--big-cpu-voltage", nargs="+", default="1.0V",
+                        help="Big CPU voltage(s).")
+    parser.add_argument("--little-cpu-voltage", nargs="+", default="1.0V",
+                        help="Little CPU voltage(s).")
+    
+    parser.add_argument("--dvfs", action="store_true",
+                        help="Enable the DVFS Handler.")
+
     return parser
 
 
@@ -365,7 +375,7 @@ def build(options):
     # big cluster
     if options.big_cpus > 0:
         system.bigCluster = big_model(
-            system, options.big_cpus, options.big_cpu_clock
+            system, options.big_cpus, options.big_cpu_clock, options.big_cpu_voltage
         )
         system.mem_mode = system.bigCluster.memory_mode()
         all_cpus += system.bigCluster.cpus
@@ -373,7 +383,7 @@ def build(options):
     # little cluster
     if options.little_cpus > 0:
         system.littleCluster = little_model(
-            system, options.little_cpus, options.little_cpu_clock
+            system, options.little_cpus, options.little_cpu_clock, options.little_cpu_voltage
         )
         system.mem_mode = system.littleCluster.memory_mode()
         all_cpus += system.littleCluster.cpus
@@ -421,6 +431,13 @@ def build(options):
 
     if options.vio_9p:
         FSConfig.attach_9p(system.realview, system.iobus)
+
+    #DVFS
+
+    if options.dvfs:
+        system.dvfs_handler.domains = [system.bigCluster.clk_domain,
+                                       system.littleCluster.clk_domain]
+        system.dvfs_handler.enable = options.dvfs
 
     return root
 

@@ -36,18 +36,18 @@ int main(int argc, char* argv[])
 */
 { 	
     // Print test case
-	printf("Running O(n) test with 2048 entries");
+	printf("Running O(n) test with 1024 entries");
 	
 	int count = 0;
 	
-    // Loop 2048 times
-	for(int i=1; i<=128; i++){
-	    //printf("%d\n", i);
+    // Loop 1024 times
+	for(int i=1; i<=1024; i++){
+	    printf("%d\n", i);
 	    count++;
 	}
 	
 	// Print success
-	printf("\nRan 128 operations");
+	printf("\nRan 1024 operations");
 	
     return 0;
 }

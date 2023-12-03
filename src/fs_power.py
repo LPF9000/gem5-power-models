@@ -140,7 +140,7 @@ def main():
     print("*" * 70)
 
     # Dumping stats periodically
-    m5.stats.periodicStatDump(m5.ticks.fromSeconds(0.1e-3))
+    m5.stats.periodicStatDump(m5.ticks.fromSeconds(1.0e-3))
     bL.run()
 
 

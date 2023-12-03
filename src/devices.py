@@ -38,7 +38,7 @@
 import m5
 from m5.objects import *
 
-m5.util.addToPath("../../")
+m5.util.addToPath("../../configs/")
 from common.Caches import *
 from common import ObjectList
 
@@ -290,7 +290,7 @@ class FastmodelCluster(CpuCluster):
 
         self.voltage_domain = VoltageDomain(voltage=cpu_voltage)
         self.clk_domain = SrcClockDomain(
-            clock=cpu_clock, voltage_domain=self.voltage_domain
+            clock=cpu_clock, voltage_domain=self.voltage_domain, domain_id=system.numCpuClusters()
         )
 
         # Setup CPU

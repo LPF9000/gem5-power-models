@@ -41,7 +41,6 @@ import os
 import sys
 import m5
 import m5.util
-from m5.objects import *
 
 m5.util.addToPath("../../configs")
 
@@ -50,6 +49,7 @@ from common import SysPaths
 from common import ObjectList
 from common import Options
 from common.cores.arm import ex5_big, ex5_LITTLE
+from m5.objects import *
 import devices
 from devices import AtomicCluster, KvmCluster, FastmodelCluster
 
@@ -326,6 +326,14 @@ def addOptions(parser):
     
     parser.add_argument("--dvfs", action="store_true",
                         help="Enable the DVFS Handler.")
+                        
+    parser.add_argument("--l1i-size", default="32kB", help="L1 instruction cache size")
+    parser.add_argument("--l1i-associativity", type=int, default=2, help="L1 instruction cache 		associativity")
+    parser.add_argument("--l1d-size", default="32kB", help="L1 data cache size")
+    parser.add_argument("--l1d-associativity", type=int, default=2, help="L1 data cache associativity")
+    parser.add_argument("--l2-size", default="256kB", help="L2 cache size")
+    parser.add_argument("--l2-associativity", type=int, default=8, help="L2 cache associativity")
+
 
     return parser
 

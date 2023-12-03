@@ -29,26 +29,26 @@
 #include <stdio.h>
 
 int main(int argc, char* argv[])
-/* Description: Print operation for 1024*log2(1024) entries. This represents 
+/* Description: Print operation for 128*log2(128) entries. This represents 
    the O(nlog(n)) case for our gem5 test cases.
 
    Author: Rabon B. Marks
 */
 { 	
     // Print test case
-	printf("Running O(n**2) test with 1024*log2(1024) entries");
+	printf("Running O(n**2) test with 128*log2(128) entries");
 	int count = 0;
-    // Loop 1024 times
-	for(int i=1; i<=1024; i++){
-		// Loop 1024 times
-	    for(int j=1; j<=1024; j=j*2){
+    // Loop 128 times
+	for(int i=1; i<=128; i++){
+		// Loop 128 times
+	    for(int j=1; j<=128; j=j*2){
 	        printf("%d, %d\n", i, j);
 	        count++;
 	    }
 	}
 	
 	// Print success
-	printf("\nRan 1024*log2(1024) operations");
+	printf("\nRan 128*log2(128) operations");
 	
     return 0;
 }
@@ -56,6 +56,6 @@ int main(int argc, char* argv[])
 /*  ---- Changelog ----
 
   11/25/2023: Rabon B. Marks
-  Made algorithm run 1024*log2(1024) times for O(nlogn) time complexity and
+  Made algorithm run 128*log2(128) times for O(nlogn) time complexity and
   O(1) space complexity.
 */

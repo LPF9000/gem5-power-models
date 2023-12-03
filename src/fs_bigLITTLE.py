@@ -50,6 +50,7 @@ from common import ObjectList
 from common import Options
 from common.cores.arm import ex5_big, ex5_LITTLE
 from m5.objects import *
+m5.util.addToPath("../../configs/example/arm")
 import devices
 from devices import AtomicCluster, KvmCluster, FastmodelCluster
 

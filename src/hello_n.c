@@ -29,25 +29,25 @@
 #include <stdio.h>
 
 int main(int argc, char* argv[])
-/* Description: Print operation for 2048 entries. This represents the O(n)
+/* Description: Print operation for 128 entries. This represents the O(n)
    case for our gem5 test cases.
 
    Author: Rabon B. Marks
 */
 { 	
     // Print test case
-	printf("Running O(n) test with 1024 entries");
+	printf("Running O(n) test with 128 entries");
 	
 	int count = 0;
 	
-    // Loop 1024 times
-	for(int i=1; i<=1024; i++){
+    // Loop 128 times
+	for(int i=1; i<=128; i++){
 	    printf("%d\n", i);
 	    count++;
 	}
 	
 	// Print success
-	printf("\nRan 1024 operations");
+	printf("\nRan 128 operations");
 	
     return 0;
 }
@@ -55,6 +55,6 @@ int main(int argc, char* argv[])
 /*  ---- Changelog ----
 
   11/25/2023: Rabon B. Marks
-  Made algorithm run 2048 times for O(n) time complexity and O(1) space 
+  Made algorithm run 128 times for O(n) time complexity and O(1) space 
   complexity.
 */

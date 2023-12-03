@@ -43,14 +43,13 @@ import m5
 import m5.util
 from m5.objects import *
 
-m5.util.addToPath("../../")
+m5.util.addToPath("../../configs")
 
 from common import FSConfig
 from common import SysPaths
 from common import ObjectList
 from common import Options
 from common.cores.arm import ex5_big, ex5_LITTLE
-
 import devices
 from devices import AtomicCluster, KvmCluster, FastmodelCluster
 

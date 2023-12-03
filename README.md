@@ -16,8 +16,13 @@ export PATH="home/USERNAME/opt/crosstool-ng/bin:$PATH"
 ### add export PATH="/home/USERNAME/opt/crosstool-ng/bin:$PATH" to bash.rc in home
 ```bash
 ct-ng version
-ct-ng menuconfig -> target arm
-
+```
+### Target ARM in menuconfig
+```bash
+ct-ng menuconfig
+```
+### Build
+```bash
 ct-ng arm-unknown-linux-uclibcgnueabi
 ct-ng build
 ```

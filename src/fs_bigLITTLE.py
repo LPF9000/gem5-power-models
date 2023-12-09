@@ -320,9 +320,9 @@ def addOptions(parser):
     )
 
     # add Voltage Domains to a simulation 
-    parser.add_argument("--big-cpu-voltage", nargs="+", default="1.0V",
+    parser.add_argument("--big-cpu-voltage", nargs="+", default="0.51V",
                         help="Big CPU voltage(s).")
-    parser.add_argument("--little-cpu-voltage", nargs="+", default="1.0V",
+    parser.add_argument("--little-cpu-voltage", nargs="+", default="0.51V",
                         help="Little CPU voltage(s).")
     
     parser.add_argument("--dvfs", action="store_true",

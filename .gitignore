@@ -3,3 +3,5 @@ src/py_script/venv
 src/py_script/.idea/misc.xml
 src/py_script/stats.txt
 src/__pycache__
+src/output_files/voltage_0.51/size_2n/stats.txt
+src/output_files/voltage_0.51/assoc_2n/stats.txt
